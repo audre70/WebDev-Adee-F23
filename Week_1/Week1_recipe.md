@@ -1,7 +1,7 @@
 # Red Wine Chocolate Cake
 Source: https://smittenkitchen.com/2011/09/red-wine-chocolate-cake/
 
-This is my favorite chocolate cake recipe, sourced entirely from Smitten Kitchen. I make it every holiday season, and *everyone* raves about it. It's decadent and chocolatey but fluffy, and the red wine notes makes it taste extra fancy. It pairs perfectly with a buttery mascarpone cream topping, which is my favorite part. It's a showstopping dish is super simple and impressive!
+This is my favorite chocolate cake recipe, sourced from Smitten Kitchen. I make it every holiday season, and *everyone* raves about it. It's decadent and chocolatey but fluffy, and the red wine notes makes it taste extra fancy. It pairs perfectly with a buttery mascarpone cream topping, which is my favorite part. It's a showstopping dish that's super simple and impressive!
 
 ![Chocolate Cake](red-wine-chocolate-cake.webp)
 
@@ -19,6 +19,7 @@ This is my favorite chocolate cake recipe, sourced entirely from Smitten Kitchen
 - 1/2 teaspoon baking powder
 - 1/4 teaspoon table salt
 - 1/4 teaspoon ground cinnamon
+
 **Mascarpone topping**
 - 1/2 cup mascarpone cheese
 - 1/2 cup chilled heavy or whipping cream
