@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form Fields</title>
+  </head>
+  <body>
+    <!-- Form using basic input types -->
+    <!-- For more on form elements, peep W3 schools. Google-->
+    <p> 
+        The form action usually contains a file or link to process the form once we click submit.
+    </p>
+
+    <form action="create-profile.js" name="user-create" target="_self" method="GET">
+    <!-- method is always GET (query string in the browser. DO not use this if you don't want to
+    show all data in the browser, eg passwords) or POST (behind the scenes)-->
+      
+      <fieldset>
+        <legend>Simple Text Input</legend>
+        <p>
+          This is your most basic text input. We change input types with the type attribute.
+        </p>
+        <input type="text" name="FirstName"/>
+        <!--Should always identify type, helps structuring and good practice.
+          We can also limit character length with another attribute.-->
+        <label for="LastName">Last Name</label>
+        <input type="text" name="Lastname" maxlength="10" placeholder="Smith"/> 
+        <!-- make sure the for in label tag and name of input tag match up.-->
+      </fieldset>
+
+      <fieldset>
+        <legend>Text Area Example</legend>
+        <label for="WhyClass">Why did you take this class?</label> 
+        <textarea name="WhyClass" cols="50" rows="5"></textarea> 
+        <!--The text box size is adjustable unlike previous. Here we identified the size without CSS-->
+      </fieldset>
+
+      <fieldset>
+        <legend>Input Types</legend>
+        <input type="text" />
+        <input type="number" />
+        <input type="password" />
+      </fieldset>
+      
+      <fieldset>
+        <legend>Radio Fields</legend>
+        <p>Radio Fields allow the user to select ONLY than one option/value at a time.</p>
+        <label for="favoritePet">What animal is your favorite</label>
+        <input type="radio" name="favoritePet" value="dog" /> DOG
+        <input type="radio" name="favoritePet" value="cat" /> CAT
+        <input type="radio" name="favoritePet" value="chicken" /> CHICKEN
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Option Dropdowns</legend>
+        <label for="state">Pick a State 
+          <select name="state"> <!--remember to match value up to above for label-->
+            <option value="NY">New York</option>
+            <option value="NJ">New Jersey</option>
+            <option value="FL" selected>Florida</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <input type="button" value="Submit" name="submit-profile"/>
+      <input type="button" value="Submit D" name="submit-disabled" disabled/>
+
+    </form>
+  </body>
+</html>
