@@ -4,7 +4,7 @@ Link: https://origin-blog.mediatemple.net/web-development-tech/five-important-co
 
 **My Thoughts:** This is a great article for someone who's learning about UX. It debunks some of the expectations someone might hold as they approach design, such as having to immediately form design solutions independently when presented with a problem. It was very useful for me to read that you shouldn't be shy in asking for feedback in particular. As someone who is indecisive and new to design, I was pleased to learn that UX designers work alongside developers and PMs throughout their process, and that it's okay to make mistakes because each project will involve a lot of trial and error and rough sketching before reaching the final product.
 
-Summary:
+**Summary:**
 
 UX is more than just problem solving--it's also about clear communication and discussion about the solution.
 **Wireframing** is a useful and important tool to create new ideas and start this conversation before heading into the design process. The article defines it as "a process where designers draw overviews of interactive products to establish the structure and flow of possible design solutions."
