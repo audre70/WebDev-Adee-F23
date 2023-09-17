@@ -2,7 +2,7 @@
 ## Reaction and Notes to *Media Temple* article "Five Important Considerations for Wireframing"
 Link: https://origin-blog.mediatemple.net/web-development-tech/five-important-considerations-for-wireframing/
 
-**My Thoughts:** This is a great article for someone who's learning about UX. It debunks some of the expectations someone might hold as they approach design, such as having to immediately form design solutions independently when presented with a problem. It was very useful for me to read that you shouldn't be shy in asking for feedback in particular. As someone who is indecisive and new to design, I was pleased to learn that UX designers work alongside developers and PMs throughout their process, and that it's okay to make mistakes because each project will involve a lot of trial and error and rough sketching before reaching the final product.
+**My Thoughts:** This is a great article for someone who's learning about UX. It debunks some of the expectations someone might hold as they approach design, such as having to immediately form design solutions independently when presented with a problem. It was very useful for me to read that you shouldn't be shy in asking for feedback in particular. As someone who is indecisive and a little more apprehensive, I was pleased to learn that UX designers work alongside developers and PMs throughout their process, and that it's okay to make mistakes because each project will involve a lot of trial and error and rough sketching before reaching the final product.
 
 **Summary:**
 
