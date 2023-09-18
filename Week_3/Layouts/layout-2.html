@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, intiial-scale=1" />
+        <title>Layour 2: pixel based, percentage based, and clear fix class</title>
+
+        <style type="text/css">
+            body {
+                margin: 0; /* to remove default white margin */
+            }
+            /* transparent blue BG and min height so we can keep track of our
+            divs and semantic markup without having to add content */
+            /* tag selector */
+            /* commas mean 'or'. you can declare style for multiple elements */
+            div, header, footer, section, aside, article, main {
+                min-height: 100px; /* different from height 100px */
+                background-color: rgba(0,100,255,.2); /* RGBA is r, g, b, alpha (which goes from 0-1). Could also do rgb w/o a */
+            }
+            main {
+                width: 960px;
+                margin: 0 auto;
+            }
+            /* reusable class that adds a block of empty content with zero height that will clear out btoh sides
+            to avoid our wrapping issue. Use this class onthe container/wrapper element. */
+            .clearfix::after {
+            /* */
+                display: block; /* saying the same thing as width 100% */ 
+                clear: both;
+                /* to ensure cross-browser cocmpability, height=0. */
+                height: 0;
+                font-size: 0;
+                content: '0';
+                /* one last fallback */
+                visibility: hidden;
+            }
+
+            /* make descendant selector for more specificity */
+            article.col-pixels section {
+                /* 960px - 6*10px margins / 3 */
+                width: 300px;
+                margin: 0 10px;
+                float:s left;
+            }
+
+            article.col-fluid section {
+                width: 20%;
+                margin: 2.5%;
+                float: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- In this example header and footer are not included with our wrapper -->
+        <header>
+            A header element with width 100%. We will cover menus in the next example!
+        </header>
+
+        <main>
+            <h1>Article 1: Pixel based</h1>
+            <article class="clearfix">
+                <h3>Article with 3 vertical sections/columns</h3>
+                <section>Section 1</section>
+                <section>Section 2</section>
+                <section>Section 3</section>
+            </article>
+        </main>
+        <h1>Article 2; Percent based</h1>
+        <!-- fuilt layout using % -->
+        <article class="col-fluid">
+            <h3>Article with 4 vertical sections/columns</h3>
+            <p>note that this article is outside of our main element - which has a set of pixel width</p>
+            <!-- start stacking our sections after our readings and ps that display block aka 100% by default -->
+            <section>Section 1</section>
+            <section>Section 2</section>
+            <section>Section 3</section>
+            <section>Section 4</section>
+        </article>
+
+        <footer>
+            Some footer text.
+        </footer>
+    </body>
+</html>

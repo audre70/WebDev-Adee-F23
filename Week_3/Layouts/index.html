@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Layout 1</title>
+
+        <style type="text/css"> /*CSS in style tag for now.*/
+            body {
+                margin: 0; /* to remove default white margin */
+            }
+
+            /* transparent blue BG and min height so we can keep track of our
+            divs and semantic markup without having to add content */
+            /* tag selector */
+            /* commas mean 'or'. you can declare style for multiple elements */
+            div, header, footer, section, aside, article, main {
+                min-height: 100px; /* different from height 100px */
+                background-color: rgba(0,100,255,.2); /* RGBA is r, g, b, alpha (which goes from 0-1). Could also do rgb w/o a */
+            }
+
+            /* SEE BOX BORDER NOTES IN CLASS REPO!! UNDERSTAND MARGINS, PADDING, BORDER. */
+            div.wrapper { /* could use .wrapper, but we'll be more specific with class .wrapper in divs
+            "selector specificity" */
+                width: 900px;
+                /* use margin 0 auto to center our wrapper div within our browser window. */
+                margin: 0 auto; /* auto on left and right, 0 on bottom */
+                /* margin-top: 1rem; */
+                /* add a little bit of padding so we can see how child elements stack more clearly */
+                padding: 30px;
+                /* shorthand for border dimension, styles, color */
+                border: 2pm solid red; /* We can override border by saying border-top, border-right, etc. */
+
+            }
+
+            /* let's make and article and sidebar stack next to each other */
+            article {
+                width: 600px;
+                float: left;
+            }
+            aside {
+                width: 300px;
+                float: left;
+                height: 400px;
+                background-color: rgba(255,0,0,0.1);
+            }
+
+            .clearfix {
+                /* this is going to be an invisible element */
+                height: 0;
+                clear: both;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper"> <!-- Can use "container" instead of "wrapper" as well. -->
+            <header>
+                A header element witha width of 100%. We'll cover menu layouts in another example!
+            </header>
+            <main> <!-- Main content section -->
+                <h1>Main Content Section - heading elements also display block!</h1>
+                <article>
+                    <h2>Article with 3 sections</h2>
+                    <section><h3>Section 1</h3></section>
+                    <section><h3>Section 2</h3></section>
+                    <section><h3>Section 3</h3></section>
+                </article>
+                <aside> <!-- This is going to be our sidebar that we'll style with CSS to make it sit aisde-->
+                    <h2>sidebar</h2>
+                </aside>
+                <!--  add an invisible element to clear both so that your wrapprer divs
+                    actually wraps around content -->
+                <br class="clearfix">
+
+            </main>
+            <footer><h3>Some footer text</h3></footer>
+        </div>
+    </body>
+</html>
