@@ -1,4 +1,4 @@
-# HOMEWORK WEEK 2 - Due Monday, Week 3
+# Homework Week 2 - Due Monday, Week 3
 
 ### Analysis/diagram of site map and Information Architecture
 ![Site Map](Homework/site-map.jpg "Site Map")

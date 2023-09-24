@@ -33,4 +33,4 @@ done
 
 ### Markdown File Recipe Card
 
-![Recipe card](./Week1_recipe.md "Recipe card")
+See ![Recipe card](./Week1_recipe.md "Recipe card")

@@ -1,0 +1,125 @@
+/* Import google font */
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Overpass:wght@200&display=swap');
+/* 
+font-family: 'Inclusive Sans', sans-serif;
+font-family: 'Overpass', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+  }
+
+main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-bottom: .5px white solid;
+    padding: 30px;
+}
+
+h3 {
+    padding: 10px;
+    border-bottom: 2px black solid;
+    margin-bottom: 20px;
+    margin-top: 20px
+    
+
+}
+
+/* #redirect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    confused...
+} */
+
+/* .fixed-nav ul { */
+.fixed-nav  {
+    /* remove all bullet points */
+    padding-left: 50px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    /* make parent elements font size 0 because we a using inline block to stack our LI,
+    inline block stacks each element like a letter in a word or paragraph,
+    making the font size zero ensures no funky extra margins */
+    font-family: 'Overpass', sans-serif;
+    font-size: 0;
+}
+
+.fixed-nav ul li {
+    display: inline-block;
+    /* 1 rem = 16px */
+    font-size: .9rem;
+    float: left;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li a {
+    /* make sure the link's cliclkable area is larger than just the text */
+    display: block;
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    /* remove underline on the link text */
+    text-decoration: none;
+    /* change the link color */
+    color: white;
+}
+
+#searchbar {
+    width: 200px;
+    float: right;
+    padding: 20px;
+    display: inline-block;
+
+}
+
+.clearfix {
+    /* this is going to be an invisible element */
+    height: 0;
+    clear: both;
+}
+
+.wrapper {
+    width: 100%;
+    clear: both;
+    display: inline-block;
+    border-bottom: .5px lightgray solid;
+    margin-bottom: 40px;
+}
+
+figure {
+    float: right;
+    width: 50%;
+
+}
+
+section.title {
+    float: left;
+    width: 50%;
+    text-align: center;
+
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    margin: 50px;
+    text-align: center;
+    font-size: .8rem;
+}
