@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial-scale=1" />
+        <title>Positioning</title>
+        <style type="text/css">
+            * { /* star means every and any tag */
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Helvetica', Arial, sans-serif;
+
+            }
+            ul { /* remove all bullet points */
+                list-style-type: none; /* no bullets */
+                overflow: hidden; /* LOOK further. would clip any extra text */
+                background-color: #999999; /* give backround color greyish*/
+                /* make parent elements font size 0 because we are using inline block to stack our LI,
+                inline block stacks each element like a letter in a word or paragraph,
+                making the font size zero ensures no funky extra margins*/
+                font-size: 10;
+                padding: 0; /* one of the dangers of reset ... ? */
+            }
+            li {
+                display: inline-block;
+                /* 1 rem = 16px (developer should define in rems as opposed to designers, ... ) */
+            }
+            li a {
+                /* make sure the link's clickable area is larger than just the text. 
+                eg bigger clickable area aka creating a button */
+                display: block;
+                text-align: center;
+                width: 100px;
+                padding: 10px;
+                /* remove underline on link text */
+                text-decoration: none; /* see more text decoration options by googling. */
+                /* change the link color. by default it's blue and purple after having been clicked */
+                color: #333; /* closer to 000 is black, closer to fff is white. can also toggle and pick color in VS code.*/
+            }
+            li a.active { /* anchor tag with a class of active */
+                /* css is more specific and weighted heavier. you can't overwrite something more specific with something less specific. */
+                background-color: #888;
+            }
+            li a:hover { /* hover is a pseudo class selector. */
+                background-color: #111;
+                color: white; /* same as FFF. making text white so we can read it on black background. */
+            }
+
+            /* Positioning */
+            nav.fixed-nav {
+                position: fixed; /* have a fixed position for nav bar, and as you scroll the nav bar won't move. */
+                top: 0; /* you want the nav bar to stick to the top corner of the browser*/
+                left: 0; /* good practice to stick it to the left */
+                right: 0; /* now it's stretched across the top of the browser window. */
+
+                /* things generally behave as if they are positioned relative.
+                fixed position takes the content out of the rules of the other stuff. */
+            }
+
+            #abs {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                /* by default the text overflows over the red box */
+                overflow: hidden; /* this will clip the text. */
+
+                position: absolute; /* doesn't really do anything until u specify absolute where */
+                top: 200px;
+                left: 50%;
+                z-index: -100 /* can push things back or forward */
+            }
+            #rel {
+                background-color: green;
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+
+                position: relative;
+                top: -100px;
+                left: -100px;
+            }
+
+            #rel-parent {
+                width: 500px;
+                height: 500px;
+                background-color: purple;
+
+                position: relative;
+            }
+            #abs-child {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+
+                position: absolute; 
+                /* in order to give this a position relative to its parent, we have to give the parent a position of relative */
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="fixed-nav">
+            <ul> <!--Navigation bars should always be unordered lists-->
+                <li><a href="#" class="active">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+        <main>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at feugiat eros, sit amet auctor ipsum. Vestibulum lobortis velit vitae felis congue accumsan. Suspendisse pretium quis odio sed mollis. Vivamus feugiat, mauris sit amet pharetra blandit, orci quam ullamcorper libero, in hendrerit turpis velit vel felis. Vestibulum eu quam lectus. Maecenas semper eros congue nisl ullamcorper imperdiet. Nulla convallis ultricies sodales.
+            </p>
+            <p>
+            Praesent fermentum augue est, egestas ultricies odio aliquet eu. Donec ut malesuada lorem. Maecenas sollicitudin sapien sit amet magna interdum ultrices. Aenean ornare neque et tristique ultricies. Vestibulum sed lectus sed neque rhoncus auctor id ac purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam cursus euismod leo, vitae finibus ipsum scelerisque at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam mollis erat ex, vitae eleifend turpis laoreet eu. Sed quis lacus aliquet, imperdiet nisi nec, malesuada lectus. Fusce viverra mattis sollicitudin. Fusce maximus posuere mauris eget rhoncus. Integer porttitor vitae augue at lobortis. Nunc molestie aliquam nisl sit amet egestas.
+            </p>
+            <p>
+            Curabitur ut molestie metus, sed viverra tellus. Mauris sollicitudin ligula sed felis ornare, at dictum erat feugiat. Aliquam sollicitudin molestie augue, a hendrerit diam faucibus ut. Aliquam id odio suscipit, facilisis erat a, tristique nisi. Proin id mi eu odio varius malesuada at ac magna. Donec ullamcorper fermentum dictum. Phasellus in mi ut nunc ornare facilisis. Donec eu lectus enim. Aenean sit amet vestibulum turpis, eu tincidunt nibh. Maecenas aliquam massa quis lorem faucibus aliquam. Mauris ac mattis sem. Donec vel diam a ipsum mollis posuere. Fusce sit amet rutrum tortor. Suspendisse potenti. Praesent arcu nisl, accumsan condimentum lectus interdum, vulputate eleifend nibh.
+            </p>
+            <p>
+            Curabitur nec sodales eros. Nunc ultricies malesuada arcu, facilisis accumsan ligula. Morbi scelerisque tortor sem, sed finibus ipsum elementum id. Vivamus iaculis, eros vel pulvinar euismod, risus turpis consequat risus, non maximus lacus libero sit amet nibh. Quisque aliquam, odio vel euismod ornare, mi nibh luctus nisi, vel pharetra massa ex et sem. Mauris convallis turpis pretium maximus sollicitudin. Proin dictum, augue nec eleifend tristique, sapien nisi condimentum velit, sed tristique magna ipsum at dui. Praesent lorem elit, congue vel rhoncus et, mollis vel neque. Sed nisl ex, volutpat ut lacinia in, viverra at lacus. Vestibulum tempor purus condimentum condimentum lobortis. Nam egestas eros at lorem molestie gravida. In vitae consectetur turpis. In non lorem ac urna condimentum lobortis. Pellentesque interdum mi in consequat vestibulum.
+            </p>
+            <p>
+            Suspendisse ornare imperdiet velit, ut imperdiet lectus lacinia sed. Proin tincidunt diam quis nibh egestas facilisis. Etiam vel elit cursus, laoreet risus nec, laoreet nulla. Maecenas condimentum congue rhoncus. Integer at faucibus sem. Fusce aliquam felis at leo dignissim finibus. Nulla nec efficitur sapien, ut cursus odio.
+            </p>
+
+            <div id="abs"> <!-- abs for absolute. -->
+                Absolute positioning with no parent defined.
+            </div>
+            <div id="rel">
+                Relative positioned div with no parent positioning defined!
+            </div>
+            <div id="rel-parent">
+                <div id="abs-child">
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

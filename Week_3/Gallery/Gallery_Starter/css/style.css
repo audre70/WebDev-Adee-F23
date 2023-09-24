@@ -1,0 +1,51 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* Font Family usage
+font-family: 'Kaushan Script', cursive; CSS rules to specify font families */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url('../img/bg.jpg') no-repeat center fixed; /* jump out and over to image file*/
+    background-size: cover;
+    /* default is that background wants to repeat */
+}
+
+body {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.polaroid {
+    width: 240px;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.polaroid img{
+    /* make sure image fits inside div */
+    width: 100%;
+    height: auto; /* so we preserve pixel aspect ratio */
+    border: 10px solid cornsilk;
+    border-bottom-width: 45px; /* overwrite border bottom width */
+}
+
+/* if we want to put text or whatever on top of a white bborder, we have to use asbolute positioning. */
+.polaroid p {
+    position: absolute; /* make sure parent has relative positioning. */
+    text-align: center;
+    width: 240px; /* giving it a width so that it's the same as the polaroid and it will always stay centered. */
+    bottom: 14px;
+    color: lightgray;
+
+
+}

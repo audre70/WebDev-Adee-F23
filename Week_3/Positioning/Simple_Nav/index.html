@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width-device-width, initial-scale=1" />
+        <title>Simple Navbar</title>
+        <style type="text/css">
+            * { /* star means every and any tag */
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Helvetica', Arial, sans-serif;
+
+            }
+            ul { /* remove all bullet points */
+                list-style-type: none; /* no bullets */
+                overflow: hidden; /* LOOK further. would clip any extra text */
+                background-color: #999999; /* give backround color greyish*/
+                /* make parent elements font size 0 because we are using inline block to stack our LI,
+                inline block stacks each element like a letter in a word or paragraph,
+                making the font size zero ensures no funky extra margins*/
+                font-size: 10;
+            }
+            li {
+                display: inline-block;
+                /* 1 rem = 16px (developer should define in rems as opposed to designers, ... ) */
+            }
+            li a {
+                /* make sure the link's clickable area is larger than just the text. 
+                eg bigger clickable area aka creating a button */
+                display: block;
+                text-align: center;
+                width: 100px;
+                padding: 10px;
+                /* remove underline on link text */
+                text-decoration: none; /* see more text decoration options by googling. */
+                /* change the link color. by default it's blue and purple after having been clicked */
+                color: #333; /* closer to 000 is black, closer to fff is white. can also toggle and pick color in VS code.*/
+            }
+            li a.active { /* anchor tag with a class of active */
+                /* css is more specific and weighted heavier. you can't overwrite something more specific with something less specific. */
+                background-color: #888;
+            }
+
+            li a:hover { /* hover is a pseudo class selector. */
+                background-color: #111;
+                color: white; /* same as FFF. making text white so we can read it on black background. */
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul> <!--Navigation bars should always be unordered lists-->
+                <li><a href="#" class="active">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
