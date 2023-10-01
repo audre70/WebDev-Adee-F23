@@ -1,26 +1,27 @@
 # Midterm Proposal (Homework Week 4), due Monday Week 5: 
 
 ### Concept/Theme
-My goal is to create a professional website for showing my projects/art/etc like a portfolio. The main page will be fairly straightforward with a one sentence and with an image background, and you can scroll down to preview works. There will be a nav bar to lead to further reading about projects, a bio section, and contact information.
+My goal is to create a personal/professional website for showing my projects/art/etc like a portfolio. The main page will be fairly straightforward with a one sentence and with an image background, and you can scroll down to preview works. There will be a nav bar to lead to further reading about projects, a bio section, and contact information.
 
 ### Site Map
 ![site map](Homework/site-map.png "Site Map")
 
 ### Wireframes
 **Home Page**
-![home page wireframe](Homework/wireframe-home-page.png "home page wireframe")
+![home page wireframe](./Homework/wireframe-home-page.png "home page wireframe")
 
 
 **Works**
-![works wireframe](Homework/wireframe-works.png "works page wireframe")
+![works wireframe](./Homework/wireframe-works.png "works page wireframe")
 
 
 **About**
-![about wireframe](Homework/wireframe-about.png "about page wireframe")
+![about wireframe](./Homework/wireframe-about.png "about page wireframe")
 
 
 ### Inspiration
-link to pinterest.
+![pinterest board](./Homework/pinterest-board.png "inspiration")
+
 
 ### Concepts/Skills to Use
 What we have covered: nav bar, floats/flex box, links, interactive hovering, inserting images, importing fonts.
