@@ -1,6 +1,17 @@
-# Homework Week 4, due Monday Week 5: Midterm Proposal
+# Midterm Proposal (Homework Week 4), due Monday Week 5: 
 
-###
+### Concept/Theme
+My goal is to create a professional website for showing my projects/art/etc like a portfolio. The main page will be fairly straightforward with a one sentence and hopefully some sort of simple animation, and you can scroll down to preview works. There will be a nav bar to lead to further reading about projects, a bio section, and contact information.
+
+### Site Map & Wireframes
+![site map](Homework/site-map.png "Site Map")
+
+### Inspiration
+link to pinterest.
+
+### Concepts/Skills to Use
+What we have covered: nav bar, flex box, interactive hovering, inserting image, 
+What we haven't covered: download link, importing animation (javascript)?.
 
 -- 
 
