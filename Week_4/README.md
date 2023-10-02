@@ -24,8 +24,9 @@ My goal is to create a personal/professional website for showing my projects/art
 
 
 ### Concepts/Skills to Use
-What we have covered: nav bar, floats/flex box, links, interactive hovering, inserting images, importing fonts.
-What we haven't covered: icons (arrows), larger link clicking area, download links.
+***What we have covered:** nav bar, floats/flex box, links, interactive hovering, inserting images, importing fonts.
+
+**What we haven't covered:** icons (arrows), larger link clicking area, download links.
 
 
 -- 
