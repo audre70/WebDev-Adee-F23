@@ -8,9 +8,7 @@ See [about page](./aboutme.html).
 
 ## Code Snippet
 
-![Scroll behavior](./media/scroll-behavior.png "scroll behavior smooth")
-
-![Link to same page](./media/link-to-features.png "link to ID")
+![Keyframe animation](./media/keyframe-animation.png "keyframe animation")
 
 
 ## If I had more time:
