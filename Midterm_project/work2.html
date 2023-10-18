@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</html>
+
+<head>
+    <title>Audrey Vo | Work</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+        .material-icons {
+          font-size: 2.5rem;
+          color: black;
+        }
+      </style>
+      <script>
+        function toggleMenu() {
+          const el = document.getElementById('main-nav')
+          el.classList.toggle('open')
+        }
+      </script>
+</head>
+
+<body>
+    <nav class="main-menu">
+        <a href="home.html"><img id="audrey-logo" src="./media/AudreyVo_logo.png" width="234px"></a>
+
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <!-- case sensitive USE ALL LOWERCASE -->
+            <span class="material-icons">menu</span>
+        </span>
+
+        <ul class="main-nav" id="main-nav">
+            <li><a href="./work2.html" class="active">Work</a></li>
+            <li><a href="./aboutme.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="work-page-wrapper">
+        <nav class="project-side-nav">
+            <ul>
+                <li><a href="#ux-projects">UX/UI</a><span class="current-arrow">  ></span></li>
+                <li><a href="#coding-projects">Coding</a><span class="current-arrow">  ></span></li>
+                <li><a href="#art-projects">Design/Art</a><span class="current-arrow">  ></span></li>
+            </ul>
+        </nav>
+        <div class="work-wo-nav">
+            <section id="ux-projects">
+                <h2>UX Projects</h2>
+                <div class="project-container">
+                    <div class="project-image-wrapper">
+                        <img src="./media/Zeitgeist.png">
+                    </div>
+                    <div class="project-description">
+                        <h3>NYU Politics Society</h3>
+                        <p>Lorem ipsum dolor sit amet. Et commodi reprehenderit non nemo quibusdam At voluptatum alias?
+                             Ut aperiam magni At quas consequuntur.</p>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <div class="project-image-wrapper">
+                        <img src="./media/phonestand.png">
+                    </div>
+                    <div class="project-description">
+                        <h3>Phone Stand</h3>
+                        <p>Et doloribus omnis aut quaerat quam qui repudiandae maiores. Et fugit magnam ut debitis 
+                            voluptas a velit possimus eos fuga ducimus ab eius consectetur rem alias assumenda.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="coding-projects">
+                <h2>Coding Projects</h2>
+                <div class="project-container">
+                    <div class="project-image-wrapper">
+                        <img src="./media/hangman.png">
+                    </div>
+                    <div class="project-description">
+                        <h3>Game of Hangman</h3>
+                        <p>Non facere obcaecati est quod quaerat et placeat fugit et consequatur odio et quaerat 
+                            assumenda eum quod voluptatem et reprehenderit doloribus. Sit odit consequatur aut voluptas.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="art-projects">
+                <h2>Art and Design</h2>
+                <div id="art-gallery-wrapper">
+                    <div class="medium-art">
+                        <img src="./media/villafabbricotti-3.jpg" alt="en plein air à Villa Fabbricotti">
+                        <p>Plein air study at Villa Fabbricotti, May 2022.</p>
+                    </div>
+                    <div class="medium-art">
+                        <img src="./media/limonaia-di-villastrozzi.jpg" alt="en plein air à Limonaia di Villa Strozzi">
+                        <p>Plein air study at Limonaia di Villa Strozzi, May 2022.</p>
+                    </div>
+                    <div class="small-art">
+                        <img src="./media/gray_colorstudy.jpg" alt="color study in gray">
+                        <p>Color study in gray, March 2022.</p>
+                    </div>
+                    <div class="small-art">
+                        <img src="./media/blue-colorstudy.jpg" alt="color study in blue">
+                        <p>Color study in blue, February 2022.</p>
+                    </div>
+                    <div class="small-art">
+                        <img src="./media/white-colorstudy.jpg" alt="color study in white">
+                        <p>Color study in white, February 2022.</p>
+                    </div>
+                    <div class="small-art">
+                        <img src="./media/ilya1.jpg" alt="figure drawing 1 ilya">
+                        <p>Figure drawing,</p>
+                    </div>
+                    <div class="small-art">
+                        <img src="./media/ilya2.jpg" alt="figure drawing 1 ilya">
+                        <p>Figure drawing,</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="audrey-footer">
+        <p>2023 © audrey vo ˘ᵕ˘</p>
+        <p>Built by Audrey Vo</p>
+    </footer>
+
+</body>

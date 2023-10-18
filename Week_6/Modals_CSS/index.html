@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Modal Windows</title>
+        <style type="text/css">
+            .infoModal {
+                position: fixed;
+                /* will stretch to cover entire screen */
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                /* transparent gray background */
+                background-color: rgba(0,0,0,0.3);
+                /* make sure this pops up OVER all other content */
+                z-index: 999999;
+                /* starting state of 0 % opacity for our transition */
+                opacity: 0;
+                /* we always define a transition on the starting state. */
+                transition: opacity 400ms ease-in;
+                pointer-events: none; /* blocking clicking behind transparent background, when the modal is open */
+            }
+
+            .infoModal:target {
+                opacity: 1; /* destination of transition */
+                pointer-events: auto; /* re-allow pointer events */
+            }
+
+            .infoModal > div {
+                /* div thats a child (direct descendant of info modal, not just any div inside .infoModal (even further nested)) */
+                /* look for somethign with a class of infoModal and find a div that is a direct descendant */
+                width: 300px;
+                height: 300px;
+                position: relative;
+                margin: 10% auto;
+                padding: 2rem;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            .close {
+                height: 20px;
+                width: 20px;
+                background-color: white;
+                color: black;
+                position: absolute;
+                top:0;
+                right:0;
+                text-align: center;
+                text-decoration: none;
+                transition: all 1s ease;
+                line-height: 20px;
+            }
+
+            .close:hover {
+                background-color: black;
+                color: white;
+            }
+
+            a.button {
+                text-decoration: none;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#info">link to modal 1</a> <!-- opens the modal -->
+        <a href="#info2">link to modal 2</a>
+
+        <div id="info" class="infoModal">
+            <div>
+                <a href="#close" title="close" class="close">X</a> <!-- you should put title for accesibility purposes -->
+                <!-- X closes the modal -->
+                <h2>Title of Modal 1</h2>
+                <p>look at me! I'm the first modal!</p>
+            </div>
+        </div>
+
+        <div id="info2" class="infoModal">
+            <div>
+                <a href="#close" title="close" class="close">X</a>
+                <h2>Title of Modal 2</h2>
+                <p>look at me! I'm the second modal!</p>
+            </div>
+        </div>
+    </body>
+</html>

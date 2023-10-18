@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</html>
+
+<head>
+    <title id="hello-audrey">Audrey Vo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+        .material-icons {
+            font-size: 2.5rem;
+          color: black;
+        }
+      </style>
+      <script>
+        function toggleMenu() {
+          const el = document.getElementById('main-nav')
+          el.classList.toggle('open')
+        }
+      </script>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="main-menu">
+        <a href="home.html"><img id="audrey-logo" src="./media/AudreyVo_logo.png" width="234px"></a>
+
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <!-- case sensitive USE ALL LOWERCASE -->
+            <span class="material-icons">menu</span>
+        </span>
+
+        <ul class="main-nav" id="main-nav">
+            <li><a href="./work2.html">Work</a></li>
+            <li><a href="./aboutme.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- JUMBOTRON -->
+    <section class="hero">
+        <div class="title-stack">
+            <h1>Hi! My name is Audrey 👋🏼</h1>
+            <p>I'm a college student in NYC.</p>
+            <p>I like video games, dogs, and other fun stuff.</p>
+            <a href="#home-feature"><span class="material-icons" id="link-to-features">keyboard_double_arrow_down</span></a>
+        </div>
+    </section>
+    <!-- arrow icon link to scroll down-->
+    <!-- END JUMBOTRON -->
+    <section class="featured-projects" id="home-feature">
+        <div class="project-container">
+            <div class="project-image-wrapper">
+                <img src="./media/Zeitgeist.png">
+            </div>
+            <div class="project-description">
+                <h3>NYU Politics Society</h3>
+                <p>Lorem ipsum dolor sit amet. Et commodi reprehenderit non nemo quibusdam At voluptatum alias?
+                     Ut aperiam magni At quas consequuntur.</p>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project-image-wrapper">
+                <img src="./media/phonestand.png">
+            </div>
+            <div class="project-description">
+                <h3>Phone Stand</h3>
+                <p>Et doloribus omnis aut quaerat quam qui repudiandae maiores. Et fugit magnam ut debitis 
+                    voluptas a velit possimus eos fuga ducimus ab eius consectetur rem alias assumenda.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="audrey-footer">
+        <p>2023 © audrey vo ˘ᵕ˘</p>
+        <p>Built by Audrey Vo</p>
+    </footer>
+
+</body>

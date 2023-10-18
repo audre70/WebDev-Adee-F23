@@ -1,0 +1,158 @@
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    /* Takes into account border and padding of any div, article, span, figure, etc.
+    any kind of elemnt that makes a box around something. Saying it's 900px will include margin and padidng.
+    Takes into account borders and paddign into set dimensions. */
+}
+html, body { /* Zero out annoying margin on the page. */
+    margin: 0;
+}
+img {
+    /* We want images to scale to fit its parent. */
+    width: 100;
+    height: auto;
+}
+
+/* Desktop First Styling : all our styles are for desktop first */
+div.hero {
+    /* our jumbotron. */
+    width: 100vw; /* Different from 100%, which takes up 100% of its parent box. 
+    This is is saying instead, count out how many pixels my browser is
+    and take up that percentage of the viewport*/
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative; /* this means usually that we'll posiiton something absolute inside of it. 
+    THis relative parent ensures the child is positioned absolute WITHIN the parent and not
+    absoltuely positioned within the entire page*/
+    margin-bottom: 2rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 50%;
+    /* fifty percent of the parent div, 10% up from the bottom. */
+    padding: 2%;
+    background: linear-gradient(to right, rgba(255,0,0,0.5) 0%, rgba(255,0,0,0) 100%);
+    /* from color zilla */
+}
+
+button, a.info {
+    padding: 10px 20px; 
+    /* top bottom, left right */
+    border: 2px solid black; /* border box earlier takes this into account */
+    border-radius: 10px; /* rounded corners */
+    background-color: #333;
+    color: white;
+    text-transform: uppercase; /* capitalize is first letter for each word capital. uppercase is all caps. */
+    cursor: pointer;
+    text-decoration: none; /* overriding anchor tag blue and underline */
+}
+
+button:hover, a.info:hover { /* tochange stuff on hover, we could add another class */
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* say we have fifty thumbnails, wraps contents within */
+    justify-content: space-between;
+}
+.thumb {
+    /* flex items, are children of the container. earlier we applied styles to the parent*/
+    position: relative;
+    /* width: 30%; */
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* it means it doesn't scale to fit if you change window size */
+    flex-basis: 30% ; /* width before it can either grow or shrink */
+    /* shorthand way to write these 3 things above: */
+    flex: 0 0 30%; /* it's always flex: grow shrink basis */
+    overflow: hidden;
+    margin: 24px auto;
+}
+/* prepare initial state for the images to transform. we have to have a start value and end value. */
+.thumb img {
+    transform: scale(1);
+    transform: rotate(0);
+    transition: all 1s ease; /* anything that changes (all) */
+    /* since it overflow clip the images, the rest of images will be hidden when it animates.*/
+}
+
+.thumb:hover img {
+    transform: scale(1.5)rotate(-20deg); /* when we hover, we want it to grow and slightly rotate. */
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* flex box is a great way to center this horizontally and vertically. */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* we will change opacity over time, animate */
+    background-color: rgba(255,255,255,0.5);
+    transition: all 1s ease-in-out;
+}
+
+.mask h2 {
+    margin: 0;
+}
+
+.mask p {
+    font-style: italic; /* different than em tag. em tag in HTML thinks it is more important. this is just applying the styling */
+}
+
+.thumb:hover .mask {
+    opacity: 1;
+    /* this will transition in 1 sec because we said all earlier. */
+}
+
+.thumb .mask h2,
+.thumb .mask p,
+.thumb .mask a {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}
+
+.thumb:hover .mask h2,
+.thumb:hover .mask p,
+.thumb:hover .mask a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* MEDIA QUERIES */
+/* Smaller than ipad classic in portrait so we will assume mobile  */
+@media only screen and (max-width:767px){
+    .container{
+        flex-direction: column;
+        padding: 12px;
+    }
+    .hero article {
+        width: 100%;
+        padding: 25px;
+        bottom: 0;
+    }
+}
+/* tablet size */
+@media screen and (min-width: 768px) and (max-width:1024px){
+}
+
+@media only screen and (min-width: 768px) and (max-width:1024px){
+
+}
+
+
+
+

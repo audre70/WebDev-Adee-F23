@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</html>
+
+<head>
+    <title>Audrey Vo | Contact</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+        .material-icons {
+            font-size: 2.5rem;
+            color: black;
+        }
+      </style>
+      <script>
+        function toggleMenu() {
+          const el = document.getElementById('main-nav')
+          el.classList.toggle('open')
+        }
+      </script>
+</head>
+
+<body>
+    <nav class="main-menu">
+        <a href="home.html"><img id="audrey-logo" src="./media/AudreyVo_logo.png" width="234px"></a>
+
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <!-- case sensitive USE ALL LOWERCASE -->
+            <span class="material-icons">menu</span>
+        </span>
+
+        <ul class="main-nav" id="main-nav">
+            <li><a href="./work2.html">Work</a></li>
+            <li><a href="./aboutme.html">About</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="contact-container">
+           <a href="#">LinkedIn</a>
+           <a href="#">Email</a>
+           <a href="#">Github</a>
+    </div>
+
+    <footer class="audrey-footer">
+        <p>2023 © audrey vo ˘ᵕ˘</p>
+        <p>Built by Audrey Vo</p>
+    </footer>
+</body>

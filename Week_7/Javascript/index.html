@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Javascript Data Types</title>
+        <!-- 2 ways to insert javascript into html. external file or script tag.
+        it can be in the head or at the end of the document. -->
+        <!-- DOM - document object model - tree system with a head, etc. -->
+        <script type="text/Javascript">
+            // declare a variable
+            var myVar;
+            let myVar; // difference from var is that this var will change over time.
+            const myVar; // const stays the same constant valuable over time. will not and cannot change
+            myVar = "number";
+            console.log(myVar);
+
+            // we can also reassign a new value and new type to the same variable in JS.
+            myVar = "8";
+            console.log(myVar);
+            console.log(typeof myVar);
+
+            // even though 8 is "8" in string quotes we can still do math with it
+            let myVar2 = myVar*2;
+            console.log(myVar2);
+            console.log(typeof myVar2);
+
+            //we can print a mixture of strings and variables
+            let temp = 54;
+            console.log("today's temperature is ", temp, " degrees F.");
+            
+            //lets make a function.
+            // always declare and define function at the same time.
+            const notDeletable = "I can be used in a function or anywhere else because I am global"
+            function sumVals() {
+                const deletable = "I'm dead outside of here!"
+            }
+            console.log(notDeletable);
+            // this will be undefined = doesn't exist because it was declared and scoepd within 
+            console.log(deletable);
+
+            // execute a function
+            sumVals()
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

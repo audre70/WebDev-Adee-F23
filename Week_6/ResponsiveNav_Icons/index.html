@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Layouts</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- font awesome used to be the standard, but now google Material Icons is. -->
+    <!-- it's a font, so we can use font size, etc. -->
+
+    <script> // JAVASCRIPT 
+      function toggleMenu (){
+        const et = document.getElementByID('menu');
+        el.classList.toggle('open'); // if it doesnt ahve the class , add second class. if it has it, it removes it.
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="brand"><a href="#">Logo</a></h1> <!-- following Bootstrap standard. -->
+      <!-- This is the menu icon that is hidden by default on desktop and tablet sizes but shown on mobile. -->
+      <span class="mobile-menu" onclick="toggleMenu()">
+        <!-- onclick is a system class -->
+        <span class="material-icons">menu</span> <!-- the text must match Material Icons page corresponding icon, CASE SENSITIVE (lowercase)-->
+      </span> <!-- div's cousin, only takes up as much space as it contains. displays inline by default -->
+    </header>
+
+    <!-- main nav is always an unordered list of links -->
+    <nav> <!-- justify content - space between -->
+      <ul class="menu" id="menu">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
