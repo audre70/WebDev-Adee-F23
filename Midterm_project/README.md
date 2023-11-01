@@ -6,6 +6,8 @@ See [project page](./work2.html).
 
 See [about page](./aboutme.html).
 
+See [stylesheet] (./style.css).
+
 ## Code Snippet
 
 ![Keyframe animation](./media/keyframe-animation.png "keyframe animation")

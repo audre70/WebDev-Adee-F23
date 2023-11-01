@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Document Object Model</title>
+        <style>
+            #content {
+                color: red;
+            }
+
+            @media only screen and (max-width: 767px) {
+                #content {
+                    color: blue;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <button onclick="addSingleP()">Add a single P using strings</button>
+        <button onclick="addMultiP(9)">Add multiple Ps the right way using DOM nodes</button>
+    
+
+        <div id="content">
+            <p>This is some DOM dummy text that will be overwritten by innerHTML.</p>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        // put JS at the end of document to ensure that everything else on the screen is loaded first!
+        // but technically the correct way is to put event listeners in javascript.
+
+        // React is responsible for changing the DOM without reloading the page.
+        const content = document.getElementById('content'); // good practice to use const or let instead of var.
+        // will work globally in script tag after body content.
+
+        function addSingleP () {
+            content.innerHTML = '<p>This is poorly instatiated p tag using string trickery<p/>'; //  replace everything in OG with this new text.
+            // should not use this. usually for debugging.
+            }
+    </script>
+</html>
