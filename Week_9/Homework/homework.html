@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting JavaScript Function</title>
+</head>
+<body>
+
+<script>
+    function greetUser() {
+        var name = prompt('Please enter your name:');
+        var favoriteFood = prompt('Please enter your favorite food:');
+
+        if (name && favoriteFood) {
+            var message = `Nice to meet you, ${name}. I hope you have a good day with lots of ${favoriteFood}.`;
+            alert(message);
+        } else {
+            alert('Please provide both your name and favorite food.');
+        }
+    }
+
+    greetUser(); // Automatically call the function when the page loads
+</script>
+
+</body>
+</html>
+In this code, the greetUser function uses the prompt function to collect the user's name and favorite food. If both pieces of information are provided, it constructs a personalized message using a template string and displays it in a pop-up alert.
+
+The greetUser function is called automatically when the page loads. You can save this code to an HTML file and open it in a web browser to see it in action.
+
+
+
+
+
