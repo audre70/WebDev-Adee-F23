@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Practice Audrey</title>
+    <script type="text/javascript">
+
+      var Profile = {
+        me: {
+          firstName: 'Audrey',
+          pets: ['dog'],
+          likedThings: ['Zelda video games', 'sushi']
+        },
+        others: [
+          {
+            firstName: 'Mari',
+            pets: ['cat'],
+            likedThings: ['pickles', 'olives', 'crocheting']
+          },
+          {
+            firstName: 'Danya',
+            pets: ['guinea pig', 'parakeet'],
+            likedThings: ['cookies', 'Prospect park', 'matzo ball soup']
+          },
+        ],
+      }
+
+      // Me
+      console.log("My name is "+ Profile.me.firstName + " and I have a ");
+      for (i = 0; i < Profile.me.pets.length; i++) {
+        console.log(Profile.me.pets[i]);
+      }
+      console.log("Some things I like are ");
+      for (i=0; i<Profile.me.likedThings.length; i++) {
+        console.log(Profile.me.likedThings[i]);
+        if (i<(Profile.me.likedThings.length-1)) {
+            console.log("and")
+        }
+      }
+
+      // others
+      for (j=0; j<Profile.others.length; j++) {
+        console.log(Profile.others[j].firstName+ " has a ");
+        for (i = 0; i < Profile.others[j].pets.length; i++) {
+            console.log(Profile.others[j].pets[i]);
+            if (i<(Profile.others[j].pets.length-1)) {
+                console.log("and a")
+            }
+        }
+        console.log("Some things they like are ");
+        for (i=0; i<Profile.others[j].likedThings.length; i++) {
+            console.log(Profile.others[j].likedThings[i]);
+            if (i<(Profile.others[j].likedThings.length-1)) {
+                console.log("and")
+            }
+        }
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>

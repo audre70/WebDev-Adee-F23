@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Greeting JavaScript Function</title>
+</head>
+<body>
+
+<script>
+    function greetUser() {
+        var name = prompt('Please enter your name:');
+        var favoriteFood = prompt('Please enter your favorite food:');
+
+        if (name && favoriteFood) {
+            var message = `Nice to meet you, ${name}. I hope you have a good day with lots of ${favoriteFood}.`;
+            alert(message);
+        } else {
+            alert('Please provide both your name and favorite food.');
+        }
+    }
+
+    greetUser();
+</script>
+
+</body>
+</html>
