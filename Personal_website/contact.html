@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</html>
+
+<head>
+    <title id="hello-audrey">Audrey Vo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./media/favicon.png" />
+    <script src="https://kit.fontawesome.com/8d51cdad02.js" crossorigin="anonymous"></script>    <!--  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+    <script>
+    function toggleMenu() {
+        const el = document.getElementById('main-nav')
+        el.classList.toggle('open')
+    }
+    </script>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="main-menu">
+        <a href="home.html"><img id="audrey-logo" src="./media/AudreyVo_logo.png" width="200px"></a>
+
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <!-- case sensitive USE ALL LOWERCASE -->
+            <span class="material-symbols-rounded">menu</span>
+        </span>
+
+        <ul class="main-nav" id="main-nav">
+            <li class="home-nav"><a href="./home.html">Home</a></li>
+            <li><a href="./work2.html">Work</a></li>
+            <li><a href="./aboutme.html">About</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="contact-container">
+           <a href="#">LinkedIn</a>
+           <a href="#">Email</a>
+           <a href="#">Github</a>
+    </div>
+
+    <footer class="audrey-footer">
+        <p>2023 © audrey vo ˘ᵕ˘</p>
+        <p>Built by Audrey Vo</p>
+    </footer>
+</body>
