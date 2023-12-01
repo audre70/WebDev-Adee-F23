@@ -1,0 +1,174 @@
+
+
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.mobile-only {
+    display: none;
+}
+
+
+/* --- TOP NAVIGATION MENU --- */
+
+a#menu-icon {
+    display: inline-block;
+}
+a#menu-icon .bar {
+    margin: 5px;
+    width: 25px;
+    height: 2px;
+    background: white;
+    border-radius: 1.5px;
+    transition: margin 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-brand {
+    font-size: 1.563rem;
+}
+.navbar.bg-dark { background-color: rgba(0, 0, 0, 0.80) !important; }
+.navbar {
+    height: 86px;
+    padding: 0;
+}
+div.container-fluid {
+    padding: 0 92px 0 92px;
+}
+
+.navbar ul.navbar-nav {
+    gap: 2.2rem;
+    font-size: 1.125rem;
+}
+
+@media (max-width: 1024px) { /* [Desktop/Tablet] adjust padding with smaller screens */
+    div.container-fluid {
+        padding: 0 35px 0 35px;
+    }
+    .navbar ul.navbar-nav {
+        gap: 1.3rem;
+    }
+}
+
+/* --- 'FLIP' HOVER ANIMATION --- */
+.flip-contain {
+    position: relative;
+    height: 1.7rem; /* Adjust based on content height */
+    overflow: hidden;
+    display: inline-block;
+}
+.flip-contain.nav-logo { height: 2rem; } 
+
+@media only screen and (min-width: 768px) { /* static widths on large browsers, auto on smaller screens */
+    .w92 { width: 92px; } /* can't figure out dynamic widths based on link text, so add widths of containers manually.*/
+    .w83 { width: 83px; }
+    .w76 { width: 76px; }
+    .w50 { width: 50px; }
+    .w40 { width: 40px; }
+}
+
+.flip-item {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    transition: transform 0.3s ease-in-out;
+    line-height: 1.7rem; /* ! Set line-height equal to the height of the container eg flip-contain */  
+}
+
+.flip-item:nth-child(2) {
+    transform: translateY(100%);
+    color: #9b9b9b;
+    font-size: 16px;
+}
+
+.flip-contain:hover .flip-item:nth-child(1) {
+    transform: translateY(-100%);
+}
+
+.flip-contain:hover .flip-item:nth-child(2) {
+transform: translateY(0);
+}
+
+/* --- NAVBAR MEDIA QUERY --- */
+@media only screen and (max-width: 767px) { 
+    .flip-contain {
+        position: static;
+        height: auto;
+        overflow: hidden;
+        display: block;
+    }
+    .flip-item:nth-child(2) {
+        display: none;
+        /* hide all second flip links */
+    } 
+    .flip-item, .nav-link p {
+        /* disable animation, fix margins padding */
+        position: static;
+        display: flex;
+        align-items: center;
+        line-height: normal;
+        margin: 0;
+        border: none;
+        transition: none;
+    }
+    .navbar ul.navbar-nav {
+        gap: .9rem;
+    }
+    #navbarNavDropdown {
+        background-color: red;
+        padding: 1rem 0 1rem 0;
+    }
+    .mobile-only {
+        display: block;
+    }
+    .mobile-hide {
+        display: none;
+    }
+    .flip-contain:hover .flip-item:nth-child(1) {
+        transform: none;
+    }
+    div.container-fluid {
+        padding: 0;
+    }
+    .navbar-brand {
+        height: 86px; /* VERY IMPORTANT TO MAKE THIS SAME AS NAVBAR HEIGHT */
+        margin-left: 35px; 
+        /* to replace paddings in container-fluid, cancelled out to do 
+        background for toggled menu */
+    }
+    .navbar-toggler {
+        margin-right: 35px;
+    }
+    .navbar-collapse.show {
+        width: 100vw;
+    }
+    .navbar-nav.px-4 {
+        padding: 0 !important;
+    }
+}
+
+/* --- HOME PAGE --- */
+body#home-page {
+    background-color: #111;
+}
