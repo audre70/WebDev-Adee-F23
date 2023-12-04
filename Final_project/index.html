@@ -21,7 +21,7 @@
     <!-- BOOTSTRAP NAVBAR -->
     <div class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a href="#" class="navbar-brand flip-contain w83">
+        <a href="./home.html" class="navbar-brand flip-contain w83">
             <p class="flip-item">audrey</p>
             <p class="flip-item">audrey</p>
         </a>
@@ -34,7 +34,7 @@
           aria-expanded="false"
           aria-label="Toggle Navigation"
         >
-          <!-- <span class="navbar-toggler-icon"></span> -->
+          <!-- <span class="navbar-toggler-icon"></span> default bootstrap icon-->
           <a href="#" id="menu-icon">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -45,38 +45,96 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavDropdown"
         >
-        <ul class="navbar-nav d-flex align-items-center px-4">
-            <li class="nav-item mobile-only"><a class="nav-link" href="#">
+        <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item mobile-only"><a class="nav-link" href="./home.html">
                 <p>Home</p>
             </a></li>
-            <li class="nav-item flip-contain w50"><a class="nav-link" href="#">
+            <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
                 <p class="flip-item">Work</p>
                 <p class="flip-item">Work</p>
             </a></li>
-            <li class="nav-item flip-contain w40"><a class="nav-link" href="#">
+            <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
                 <p class="flip-item">Play</p>
                 <p class="flip-item">Play</p>
             </a></li>
-            <li class="nav-item flip-contain w92"><a class="nav-link" href="#">
+            <li class="nav-item flip-contain w90"><a class="nav-link" href="./aboutme.html">
                 <p class="flip-item">About Me</p>
                 <p class="flip-item">About Me</p>
             </a></li>
-            <li class="nav-item flip-contain w76"><a class="nav-link" href="#">
+            <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
                 <p class="flip-item">Contact</p>
                 <p class="flip-item">Contact</p>
             </a></li>
-            <li class="nav-item flip-contain w76"><a class="nav-link" href="#">
+            <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
                 <p class="flip-item">Resume</p>
                 <p class="flip-item">Resume</p>
             </a></li>
-            <li class="mobile-hide"> 
+            <li class="mobile-hide"><a href="https://linkedin.com/in/audrey-vo" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="36" viewBox="0 0 448 512"><path fill="white" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-            </li>
+            </a></li>
         </ul>
         </div>
-
       </div>
     </div>
 
+
+
+    <footer class="footer-main">
+        <div class="footer-wrap">
+            <div class="bye-message">
+                <h3>Thanks for visiting my portfolio, let’s connect!</h3>
+                <p>2023 © audrey vo | Made with lots of 🍵 by Audrey Vo</p>
+            </div>
+            <div class="footer-nav">
+                <ul class="navbar-nav d-flex align-items-left">
+                    <li class="nav-item flip-contain w50"><a class="nav-link" href="./home.html">
+                        <p class="flip-item">Home</p>
+                        <p class="flip-item">Home</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
+                        <p class="flip-item">Work</p>
+                        <p class="flip-item">Work</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
+                        <p class="flip-item">Play</p>
+                        <p class="flip-item">Play</p>
+                    </a></li>
+                </ul>
+                <ul class="navbar-nav d-flex align-items-left">
+                    <li class="nav-item flip-contain w90"><a class="nav-link" href="./aboutme.html">
+                        <p class="flip-item">About Me</p>
+                        <p class="flip-item">About Me</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
+                        <p class="flip-item">Contact</p>
+                        <p class="flip-item">Contact</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
+                        <p class="flip-item">Resume</p>
+                        <p class="flip-item">Resume</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navbarTogglerButtons = document.querySelectorAll('.navbar-toggler');
+            var menuIcon = document.getElementById('menu-icon');
+            // Add click event listener to all navbar-toggler buttons
+            navbarTogglerButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    // Check if the button has the 'collapsed' class
+                    if (button.classList.contains('collapsed')) {            
+                    menuIcon.classList.remove('close');
+                    } else {
+                    menuIcon.classList.add('close');
+                    }
+                });
+            });
+        });
+    </script>
   </body>
 </html>
+
+

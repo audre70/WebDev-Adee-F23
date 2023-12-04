@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap');
 
+/* 
+font-family: 'Inter', sans-serif;
+extra light 200, light 300, medium 500, bold 700
+ */
 
 body {
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
     background-color: black;
 }
@@ -22,24 +27,40 @@ a {
 }
 
 
-/* --- TOP NAVIGATION MENU --- */
+/* --------- TOP NAVIGATION MENU --------- */
 
-a#menu-icon {
-    display: inline-block;
-}
+/* cancel out default hamburger menu styling */
+button.navbar-toggler { border: 0; }
+button.navbar-toggler:focus { outline: none; box-shadow: none; }
+
+/* add custom hamburger menu with transition onclick */
+a#menu-icon { display: inline-block; }
 a#menu-icon .bar {
     margin: 5px;
     width: 25px;
     height: 2px;
     background: white;
     border-radius: 1.5px;
-    transition: margin 0.3s ease-in, transform 0.3s ease-in;
+    transition: margin 0.25s ease-out, transform 0.25s ease-out;
+}
+#menu-icon.close .bar:first-child {
+    transform: translateY(7px) rotate(45deg); /* margin plus height */
+}
+#menu-icon.close .bar:nth-child(2) {
+    opacity: 0;
+}
+#menu-icon.close .bar:last-child {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
+/* navbar styling */
 .navbar-nav .nav-link {
     color: white;
 }
 .navbar .navbar-brand {
+    font-size: 1.563rem;
+}
+.navbar-brand .flip-item:nth-child(2) { /* MAKE SURE SAME AS ABOVE */
     font-size: 1.563rem;
 }
 .navbar.bg-dark { background-color: rgba(0, 0, 0, 0.80) !important; }
@@ -56,7 +77,7 @@ div.container-fluid {
     font-size: 1.125rem;
 }
 
-@media (max-width: 1024px) { /* [Desktop/Tablet] adjust padding with smaller screens */
+@media (max-width: 1024px) { /* on desktop/tablet, adjust padding with smaller screens */
     div.container-fluid {
         padding: 0 35px 0 35px;
     }
@@ -65,17 +86,17 @@ div.container-fluid {
     }
 }
 
-/* --- 'FLIP' HOVER ANIMATION --- */
+/* --------- 'FLIP' HOVER ANIMATION --------- */
 .flip-contain {
     position: relative;
     height: 1.7rem; /* Adjust based on content height */
     overflow: hidden;
     display: inline-block;
 }
-.flip-contain.nav-logo { height: 2rem; } 
+.flip-contain.navbar-brand { height: 2rem; } 
 
 @media only screen and (min-width: 768px) { /* static widths on large browsers, auto on smaller screens */
-    .w92 { width: 92px; } /* can't figure out dynamic widths based on link text, so add widths of containers manually.*/
+    .w90 { width: 90px; } /* can't figure out dynamic widths based on link text, so add widths of containers manually.*/
     .w83 { width: 83px; }
     .w76 { width: 76px; }
     .w50 { width: 50px; }
@@ -91,7 +112,7 @@ div.container-fluid {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #333;
+    /* border: 2px solid #333; BORDER TO TRACK OUT CONTAINER SIZES*/
     transition: transform 0.3s ease-in-out;
     line-height: 1.7rem; /* ! Set line-height equal to the height of the container eg flip-contain */  
 }
@@ -99,18 +120,16 @@ div.container-fluid {
 .flip-item:nth-child(2) {
     transform: translateY(100%);
     color: #9b9b9b;
-    font-size: 16px;
+    font-size: 1rem;
 }
-
 .flip-contain:hover .flip-item:nth-child(1) {
     transform: translateY(-100%);
 }
-
 .flip-contain:hover .flip-item:nth-child(2) {
 transform: translateY(0);
 }
 
-/* --- NAVBAR MEDIA QUERY --- */
+/* --------- NAVBAR MEDIA QUERY --------- */
 @media only screen and (max-width: 767px) { 
     .flip-contain {
         position: static;
@@ -136,8 +155,9 @@ transform: translateY(0);
         gap: .9rem;
     }
     #navbarNavDropdown {
-        background-color: red;
-        padding: 1rem 0 1rem 0;
+        /* background-color: red; */
+        background-color: rgba(0, 0, 0, 0.90) !important;
+        padding: 2rem 0 4rem 0;
     }
     .mobile-only {
         display: block;
@@ -158,7 +178,7 @@ transform: translateY(0);
         background for toggled menu */
     }
     .navbar-toggler {
-        margin-right: 35px;
+        margin-right: 25px;
     }
     .navbar-collapse.show {
         width: 100vw;
@@ -168,7 +188,118 @@ transform: translateY(0);
     }
 }
 
-/* --- HOME PAGE --- */
+/* --------- FOOTER --------- */
+.footer-main .flip-item { /* cancel out other styling */
+    justify-content: left;
+}
+
+.footer-main {
+    /* background-color:red; */
+    display: flex;
+    align-items: center;
+    height: 12.5rem;
+    padding: 0 6rem 0 6rem;
+    margin-top: 6rem;
+}
+.footer-wrap {
+    display: flex;
+    width: 100%;
+}
+/* left */
+.bye-message {
+    width: 65%;
+    padding-right: 3.75rem;
+}
+.bye-message h3 { font-size: 1.6rem; font-weight: 300;}
+.bye-message p { font-size: .8rem; padding-top: 1rem;}
+/* right */
+.footer-nav {
+    /* two columns */
+    display: flex;
+    gap: 5rem;
+    padding-top: 0.3rem;
+}
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1.1rem;
+}
+
+
+/* --------- FOOTER MEDIA QUERY --------- */
+@media (max-width: 1024px) { /* on desktop/tablet, adjust padding with smaller screens */
+    .footer-main {
+        padding: 0 4rem 0 3rem;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .bye-message h3 { font-size: 1.3rem;}
+    .bye-message p { font-size: .7rem;}
+    .footer-nav ul {
+        gap: 0.8rem;
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 0.9rem;
+        padding: 0 !important;
+    }
+    .bye-message {
+        padding-right: 2rem;
+    }
+    .footer-nav {
+        gap: 3rem;
+    }
+    .footer-wrap {
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .footer-main {
+        padding: 0 2rem 0 2rem;
+        height: 18rem;
+    }
+    .footer-wrap { flex-direction: column; }
+    .footer-nav {
+        gap: 4rem;
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+    }
+    .bye-message {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    .bye-message h3 {margin-bottom: .4rem;}
+    .bye-message p {padding-top: 0;}
+}
+
+
+/* --------- HOME PAGE --------- */
 body#home-page {
+    background-color: #111;
+}
+
+
+/* --------- CONTACT PAGE --------- */
+body#contact-page {
+    background-color: #111;
+}
+.contact-jumbotron {
+    width: 100vw;
+}
+
+/* --------- ABOUT PAGE --------- */
+body#about-page {
+    background-color: #111;
+}
+
+/* --------- PLAY PAGE --------- */
+body#play-page {
+    background-color: #111;
+}
+
+/* --------- WORK PAGE --------- */
+body#work-page {
     background-color: #111;
 }
