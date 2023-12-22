@@ -1,6 +1,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 // ANIMATIONS FOR HOME PAGE
 gsap.from('.navbar', {
     duration: 1.6,
@@ -49,17 +50,28 @@ gsap.from('#avatar-caption', {
 });
 
 // projects scrolltrigger
-gsap.from('.featured-container-1', {
+gsap.from('#taskbuddy-wrap', {
     scrollTrigger: {
-        trigger: ".featured-container-1",
+        trigger: "#taskbuddy-wrap",
         toggleActions: 'restart none none none',
         // takes in 4 arguments
         // play, pause, resume, reverse, restart, reset, complete, none
     },
-    duration: 2,
-    scale: .96,
+    duration: 0.8,
+    scale: .95,
     opacity: 0,
-    ease: 'power3.out',
+    ease: 'power1.out',
+});
+
+gsap.from('#nyushuttle-wrap', {
+    scrollTrigger: {
+        trigger: "#nyushuttle-wrap",
+        toggleActions: 'restart none none none',
+    },
+    duration: 0.8,
+    scale: .95,
+    opacity: 0,
+    ease: 'power1.out',
 });
 
 // contact page
@@ -94,73 +106,56 @@ gsap.from('.connect-social', {
 gsap.from('#audrey-1', {
     scrollTrigger: {
         trigger: "#audrey-1",
-        toggleActions: 'restart none none none',
-    },
-    duration: .5,
-    scale: .6,
-    ease: 'power4.out',
-});
-gsap.from('#audrey-1', {
-    scrollTrigger: {
-        trigger: "#audrey-1",
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none none',
     },
     duration: .7,
+    scale: .6,
     opacity: 0,
     ease: 'power4.out',
 });
 gsap.from('#bio-1', {
     scrollTrigger: {
         trigger: "#bio-1",
-        toggleActions: 'restart none none none',
-    },
-    duration: .5,
-    scale: .6,
-    ease: 'power4.out',
-});
-gsap.from('#bio-1', {
-    scrollTrigger: {
-        trigger: "#bio-1",
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none none',
     },
     duration: .7,
     opacity: 0,
+    scale: .7,
     ease: 'power4.out',
 });
 
 gsap.from('#bio-2', {
     scrollTrigger: {
         trigger: "#bio-2",
-        toggleActions: 'restart none none none',
-    },
-    duration: .5,
-    scale: .6,
-    ease: 'power4.out',
-});
-gsap.from('#bio-2', {
-    scrollTrigger: {
-        trigger: "#bio-2",
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none',
     },
     duration: .7,
+    delay: .5,
     opacity: 0,
+    scale: .7,
     ease: 'power4.out',
 });
+
 gsap.from('#audrey-2', {
     scrollTrigger: {
         trigger: "#audrey-2",
-        toggleActions: 'restart none none none',
-    },
-    duration: .5,
-    scale: .6,
-    ease: 'power4.out',
-});
-gsap.from('#audrey-2', {
-    scrollTrigger: {
-        trigger: "#audrey-2",
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none none',
     },
     duration: .7,
     opacity: 0,
+    scale: .7,
     ease: 'power4.out',
+});
+
+// Play page
+gsap.from(['#play-title-card', '.categories'], {
+    duration: 1.2,
+    opacity: 0,
+    ease: 'power1.inOut',
+});
+gsap.from('#letterA', {
+    rotate: 18,
+    duration: .8,
+    delay: 1.2,
+    ease: 'bounce.out',
 });

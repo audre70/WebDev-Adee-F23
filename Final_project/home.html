@@ -21,78 +21,87 @@
   <body class="p-0 m-0 border-0" id="home-page">
     <!-- BOOTSTRAP NAVBAR -->
     <div class="navbar navbar-expand-md bg-dark fixed-top" data-bs-theme="dark">
-      <div class="container-fluid">
-        <div class="navbar-brand">
-            <a href="./home.html" class="flip-contain w83">
-                <p class="flip-item">audrey</p>
-                <p class="flip-item">audrey</p>
+        <div class="container-fluid">
+          <div class="navbar-brand">
+              <a href="./home.html" class="flip-contain w83">
+                  <p class="flip-item">audrey</p>
+                  <p class="flip-item">audrey</p>
+              </a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="#navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle Navigation"
+          >
+            <a href="#" id="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </a>
-        </div>
-        <!-- <a href="./home.html" class="navbar-brand flip-contain w83">
-            <p class="flip-item">audrey</p>
-            <p class="flip-item">audrey</p>
-        </a> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="#navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
-        >
-          <!-- <span class="navbar-toggler-icon"></span> default bootstrap icon-->
-          <a href="#" id="menu-icon">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </a>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-        <ul class="navbar-nav d-flex align-items-center">
-            <li class="nav-item d-md-none"><a class="nav-link" href="./home.html">
-                <p>Home</p>
-            </a></li>
-            <!-- <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
-                <p class="flip-item">Work</p>
-                <p class="flip-item">Work</p> -->
-            </a></li>
-            <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
-                <p class="flip-item">Play</p>
-                <p class="flip-item">Play</p>
-            </a></li>
-            <li class="nav-item flip-contain w90"><a class="nav-link" href="./about.html">
-                <p class="flip-item">About Me</p>
-                <p class="flip-item">About Me</p>
-            </a></li>
-            <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
-                <p class="flip-item">Contact</p>
-                <p class="flip-item">Contact</p>
-            </a></li>
-            <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
-                <p class="flip-item">Resume</p>
-                <p class="flip-item">Resume</p>
-            </a></li>
-            <li class="mobile-hide"><a href="https://linkedin.com/in/audrey-vo" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="36" viewBox="0 0 448 512"><path fill="white" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-            </a></li>
-        </ul>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+          <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item d-md-none"><a class="nav-link" href="./home.html">
+                  <p>Home</p>
+              </a></li>
+              <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
+                  <p class="flip-item">Play</p>
+                  <p class="flip-item">Play</p>
+              </a></li>
+              <li class="nav-item flip-contain w90"><a class="nav-link" href="./about.html">
+                  <p class="flip-item">About Me</p>
+                  <p class="flip-item">About Me</p>
+              </a></li>
+              <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
+                  <p class="flip-item">Contact</p>
+                  <p class="flip-item">Contact</p>
+              </a></li>
+              <li class="nav-item flip-contain w76"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                  <p class="flip-item">Resume</p>
+                  <p class="flip-item">Resume</p>
+              </a></li>
+              <li class="mobile-hide"><a href="https://linkedin.com/in/audrey-vo" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="36" viewBox="0 0 448 512"><path fill="white" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </a></li>
+          </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <!-- modal for resume -->
+      <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Click <a href="https://drive.google.com/file/u/2/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view" target="_blank">this link</a> if resume is not loading.</p>
+                <iframe src="./media/AudreyVo_designResume.pdf" style="width: 100%; height: 700px;"></iframe>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="home-jumbotron container-fluid">
         <div class="welcome">
-            <h2>hi!<br>i'm audrey<span class="d-md-none"> 🌱</span></h2>
-            <p>nyu student and ux designer channelling curiosity and care into building experiences informed by research-based design methodologies.</p>
+            <h2>hi!<br>it's audrey<span class="d-md-none"> 🧃</span></h2>
+            <p>nyu student and ux designer channelling curiosity and care into building experiences informed by research-based methodologies</p>
         </div>
         <div class="right-welcome d-none d-md-block">
             <div class="avatar-wrapper">
                 <div id="circle"></div>
-                <img id="avatar" src="./media/avatar.png" alt="Audrey's memoji" width=104px height=99px >
+                <img id="avatar" src="./media/avatar.png" alt="Audrey's memoji" width=108px height=100px >
                 <img id="leaf1" src="./media/leaf2.png" width=22.888px height=27.466px>
                 <img id="leaf2" src="./media/leaf1.png" width=25.865px height=25.865px>    
             </div>
@@ -105,27 +114,31 @@
             </ul>
         </div>
     </div>
-    <div class="featured-container-1 container-fluid">
-        <div class="featured-wrap">
-            <img class="screen-1 proj-thumbnail" src="./project-media/screen2.png">
-            <img class="screen-2 proj-thumbnail" src="./project-media/screen1.png">
-            <img class="screen-3 proj-thumbnail" src="./project-media/screen3.png">
-        </div>
-        <div class="featured-text">
-            <h2 class="featured-title"><a href="./project1.html">TaskBuddy App<span class="material-symbols-rounded arrow-up" >north_east</span></a></h2>
-            <p>Organization & task management for college students</p>
-        </div>
-    </div>
-    <div class="featured-container-2 container-fluid">
-        <div class="featured-wrap">
-            <img class="screen-1 proj-thumbnail" src="./project-media/screen2.png">
-            <img class="screen-2 proj-thumbnail" src="./project-media/screen1.png">
-            <img class="screen-3 proj-thumbnail" src="./project-media/screen3.png">
-        </div>
-        <div class="featured-text">
-            <h2 class="featured-title"><a href="./project1.html">TaskBuddy App<span class="material-symbols-rounded arrow-up" >north_east</span></a></h2>
-            <p>Organization & task management for college students</p>
-        </div>
+    <div class="featured-section container-fluid">
+        <div class="featured-container" id="taskbuddy-wrap"><a href="./taskbuddy.html">
+            <div class="featured-thumb-wrap">
+                <!-- three versions depending on browser size -->
+                <img class="proj-thumbnail d-none d-xl-block" src="./project-media/taskbuddy-thumbnail.png" alt="TaskBuddy project thumbnail">
+                <img class="proj-thumbnail d-none d-sm-block d-xl-none" src="./project-media/taskbuddy-thumbnail-mid.png" alt="TaskBuddy project thumbnail">
+                <img class="proj-thumbnail d-block d-sm-none" src="./project-media/taskbuddy-thumbnail-mobile.png" alt="TaskBuddy project thumbnail">
+            </div>
+            <li class="nav-item flip-contain w600">
+                <p class="flip-item">TaskBuddy App <span class="material-symbols-rounded arrow-up">north_east</span></p>
+                <p class="flip-item">Organization & task management for college students <span class="material-symbols-rounded arrow-up">north_east</span></p>
+            </li>
+        </a></div>
+        <div class="featured-container" id="nyushuttle-wrap"><a href="#">
+            <div class="featured-thumb-wrap">
+                <!-- three versions depending on browser size -->
+                <img class="proj-thumbnail d-none d-xl-block" src="./project-media/nyushuttle.png" alt="NYU Shuttle project thumbnail">
+                <img class="proj-thumbnail d-none d-sm-block d-xl-none" src="./project-media/nyushuttle-mid.png" alt="NYU Shuttle project thumbnail">
+                <img class="proj-thumbnail d-block d-sm-none" src="./project-media/nyushuttle-mobile.png" alt="NYU Shuttle project thumbnail">
+            </div>
+            <li class="nav-item flip-contain w600">
+                <p class="flip-item">NYU Shuttle Buses <span class="material-symbols-rounded arrow-up">north_east</span></p>
+                <p class="flip-item">Instant transportation tracking and guidance <span class="material-symbols-rounded arrow-up">north_east</span></p>
+            </li>
+        </a></div>
     </div>
 
     <footer class="footer-main">
@@ -140,9 +153,9 @@
                         <p class="flip-item">Home</p>
                         <p class="flip-item">Home</p>
                     </a></li>
-                    <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
-                        <p class="flip-item">Work</p>
-                        <p class="flip-item">Work</p>
+                    <li class="nav-item flip-contain w100"><a class="nav-link" href="./about.html">
+                        <p class="flip-item">About Me</p>
+                        <p class="flip-item">About Me</p>
                     </a></li>
                     <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
                         <p class="flip-item">Play</p>
@@ -150,17 +163,17 @@
                     </a></li>
                 </ul>
                 <ul class="navbar-nav d-flex align-items-left">
-                    <li class="nav-item flip-contain w90"><a class="nav-link" href="./about.html">
-                        <p class="flip-item">About Me</p>
-                        <p class="flip-item">About Me</p>
-                    </a></li>
                     <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
                         <p class="flip-item">Contact</p>
                         <p class="flip-item">Contact</p>
                     </a></li>
-                    <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
+                    <li class="nav-item flip-contain w76"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">
                         <p class="flip-item">Resume</p>
                         <p class="flip-item">Resume</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w90"><a class="nav-link" href="https://linkedin.com/in/audrey-vo" target="_blank">
+                        <p class="flip-item">LinkedIn</p>
+                        <p class="flip-item">LinkedIn</p>
                     </a></li>
                 </ul>
             </div>

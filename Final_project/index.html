@@ -26,10 +26,7 @@
                   <p class="flip-item">audrey</p>
               </a>
           </div>
-          <!-- <a href="./home.html" class="navbar-brand flip-contain w83">
-              <p class="flip-item">audrey</p>
-              <p class="flip-item">audrey</p>
-          </a> -->
+
           <button
             class="navbar-toggler"
             type="button"
@@ -39,7 +36,6 @@
             aria-expanded="false"
             aria-label="Toggle Navigation"
           >
-            <!-- <span class="navbar-toggler-icon"></span> default bootstrap icon-->
             <a href="#" id="menu-icon">
               <div class="bar"></div>
               <div class="bar"></div>
@@ -54,10 +50,6 @@
               <li class="nav-item d-md-none"><a class="nav-link" href="./home.html">
                   <p>Home</p>
               </a></li>
-              <!-- <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
-                  <p class="flip-item">Work</p>
-                  <p class="flip-item">Work</p>
-              </a></li> -->
               <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
                   <p class="flip-item">Play</p>
                   <p class="flip-item">Play</p>
@@ -70,7 +62,7 @@
                   <p class="flip-item">Contact</p>
                   <p class="flip-item">Contact</p>
               </a></li>
-              <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
+              <li class="nav-item flip-contain w76"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">
                   <p class="flip-item">Resume</p>
                   <p class="flip-item">Resume</p>
               </a></li>
@@ -81,7 +73,23 @@
           </div>
         </div>
       </div>
-
+      <!-- modal for resume -->
+      <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Click <a href="https://drive.google.com/file/u/2/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view" target="_blank">this link</a> if resume is not loading.</p>
+                <iframe src="./media/AudreyVo_designResume.pdf" style="width: 100%; height: 700px;"></iframe>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
 
     <footer class="footer-main">
         <div class="footer-wrap container-fluid">
@@ -95,9 +103,9 @@
                         <p class="flip-item">Home</p>
                         <p class="flip-item">Home</p>
                     </a></li>
-                    <li class="nav-item flip-contain w50"><a class="nav-link" href="./work.html">
-                        <p class="flip-item">Work</p>
-                        <p class="flip-item">Work</p>
+                    <li class="nav-item flip-contain w90"><a class="nav-link" href="./about.html">
+                        <p class="flip-item">About Me</p>
+                        <p class="flip-item">About Me</p>
                     </a></li>
                     <li class="nav-item flip-contain w40"><a class="nav-link" href="./play.html">
                         <p class="flip-item">Play</p>
@@ -105,17 +113,17 @@
                     </a></li>
                 </ul>
                 <ul class="navbar-nav d-flex align-items-left">
-                    <li class="nav-item flip-contain w90"><a class="nav-link" href="./about.html">
-                        <p class="flip-item">About Me</p>
-                        <p class="flip-item">About Me</p>
-                    </a></li>
                     <li class="nav-item flip-contain w76"><a class="nav-link" href="./contact.html">
                         <p class="flip-item">Contact</p>
                         <p class="flip-item">Contact</p>
                     </a></li>
-                    <li class="nav-item flip-contain w76"><a class="nav-link" href="https://drive.google.com/file/d/1GLWdbjP0Xuh64C5RbYG63qgv4wK-c0Ts/view?usp=sharing" target="_blank">
+                    <li class="nav-item flip-contain w76"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">
                         <p class="flip-item">Resume</p>
                         <p class="flip-item">Resume</p>
+                    </a></li>
+                    <li class="nav-item flip-contain w90"><a class="nav-link" href="https://linkedin.com/in/audrey-vo" target="_blank">
+                        <p class="flip-item">LinkedIn</p>
+                        <p class="flip-item">LinkedIn</p>
                     </a></li>
                 </ul>
             </div>
