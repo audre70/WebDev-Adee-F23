@@ -14,6 +14,7 @@ I've been working on this for a couple weeks and encountered a few difficulties 
 
 ### Issues I encountered
 - When I was trying to animate the hamburger menu into an "x" when the dropdown was toggled open on mobile (indicating that the menu could now be closed), I was trying to use bootstrap's event listeners to detect when the menu was open. I had a hard time inspecting it at first because my hamburger would only animate to an X after the menu was fully open, not during the 'opening' animation of the menu which made the icon seem like it wasn't giving proper feedback.
+- theres also a problem with the hamburger menu I can't figure out -- when it opens, the animation is not smooth / it's choppy.
 - for GSAP, I found that using a lot of scrolltrigger functions would slow down the processing of my website, so I reduced how many I used
 - For my photocarousel, it would be choppy and not animate properly, but luckily I found a tutorial that was doing the exact thing I was trying to do.
 - I spent a day trying to get one of my p5.js sketches into the background of one of my webpages, which worked but made the website really slow. The sketch was basically a fun interactive animation that followed your cursor, so I'm not sure why it made my site crash. In the end, I left it out. In the future, I want to learn how to better optimize the website when I import external libraries or use javascript.
