@@ -1,5 +1,7 @@
 # FINAL PROJECT
 
+GITHUB PAGES LINK TO WEBSITE https://audre70.github.io/Portfolio/index.html
+
 My project was a continuation / redo of my personal website. This time around, I aimed for a more clean, modern style and polished look, while also mastering the things we've learned in the class about Javascript, Bootstrap, and GSAP. I wanted it to be fully responsive all the way from super giant HD screens to skinny small mobile screens.
 
 I've been working on this for a couple weeks and encountered a few difficulties along the way because I was really set on making some things work, such as a flipping nav link animation, the toggle hamburger to X animation, and also the keyframe photo 'carousel' (not really a carousel but I'm not sure what to call it).
